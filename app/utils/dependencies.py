@@ -9,7 +9,7 @@ from app.utils.security import decode_access_token
 
 security = HTTPBearer()
 
-
+    
 async def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: AsyncSession = Depends(get_db)
